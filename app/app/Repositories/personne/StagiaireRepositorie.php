@@ -3,21 +3,21 @@
 namespace App\Repositories\personne;
 
 use App\Repositories\BaseRepositorie;
-use App\Models\Membre;
+use App\Models\Stagiaire;
 
-class MembreRepositorie extends BaseRepositorie
+class StagiaireRepositorie extends BaseRepositorie
 {
-    public function __construct(Membre $membre){
+    public function __construct(Stagiaire $membre){
         parent::__construct($membre);
     }
 
-    public function paginate($perPage = 3, $type = 'Membre'){
+    public function paginate($perPage = 3, $type = 'Stagiaire'){
         return parent::paginate($perPage, $type);
     }
     
 
     public function searchMembre($search){
-        return Membre::where('type', 'Membre')->where(function($query) use ($search) {
+        return Stagiaire::where('type', 'stagiaire')->where(function($query) use ($search) {
             $query->where('nom', 'like', '%' . $search . '%')
                   ->orWhere('prenom', 'like', '%' . $search . '%');
         })->paginate();

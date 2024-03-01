@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Personne;
 use App\Traits\MorphType; 
 
-class Membre extends Personne
+class Formateur extends Personne
 {
     use HasFactory, MorphType; 
 }
