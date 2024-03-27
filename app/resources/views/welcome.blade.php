@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="{{ route('membre.create') }}">Ajouter</a>
+    <a href="{{ route('stagiaire.create') }}">Ajouter</a>
       
 </body>
 </html>
